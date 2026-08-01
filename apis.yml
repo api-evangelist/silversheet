@@ -1,8 +1,25 @@
 aid: silversheet
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/silversheet.png
 name: silversheet
-description: silversheet is a company surfaced as a portfolio company of slow-ventures, techstars and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: silversheet was a healthcare credentialing and provider-workforce technology company added
+  to the API Evangelist network as a stub from venture-portfolio sourcing. As of this enrichment pass its
+  domain silversheet.com no longer serves an independent product or developer surface — it redirects to
+  AMN Healthcare's workforce technology platform (amnhealthcare.com/technology/workforce/), indicating the
+  Silversheet brand has been absorbed into AMN Healthcare. No api/developer/docs subdomains resolve, no
+  OpenAPI or developer portal was found, and no first-party API surface exists to enrich. The domain is
+  still administratively live (SPF and DMARC configured, Proofpoint MX), so a domain-security probe was
+  recorded, but there is no independent API to profile.
 url: https://raw.githubusercontent.com/api-evangelist/silversheet/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,11 +28,19 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired-redirect
+x-redirects-to: https://www.amnhealthcare.com/technology/workforce/
+x-api-surface: none
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Healthcare
+- Credentialing
+- Workforce
+- Medical
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +48,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/silversheet-domain-security.yml
 - type: Website
   url: https://silversheet.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
